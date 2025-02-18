@@ -4,7 +4,7 @@ services:
 
   broker-service:
     build:
-      context: /var/www/go-micro/broker-service
+      context: ./../broker-service
       dockerfile: broker-service.dockerfile
     restart: always
     ports:
