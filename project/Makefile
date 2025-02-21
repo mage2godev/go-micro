@@ -3,6 +3,14 @@ BROKER_BINARY=brokerApp
 AUTH_BINARY=authApp
 
 ## up: starts all containers in the background without forcing build
+restart:
+	@echo "Starting Docker images..."
+	docker-compose down
+	@echo "Docker images down!"
+	docker-compose up -d
+	@echo "Docker images restarted!"
+
+## up: starts all containers in the background without forcing build
 up:
 	@echo "Starting Docker images..."
 	docker-compose up -d
